@@ -1,0 +1,39 @@
+.flags {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.img_wrp {
+  width: 240px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.img_wrp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img_wrp:hover {
+  transform: scale(1.1);
+}
+
+.guess_the_flag {
+  margin-top: 100px;
+}
+
+body.correct {
+  background-color: green;
+  transition: background-color 0.5s ease;
+}
+
+body.incorrect {
+  background-color: #e90317;
+  transition: background-color 0.5s ease;
+}
