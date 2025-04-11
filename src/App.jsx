@@ -1,8 +1,8 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import GuessCountry from './pages/GuessCountry/GuessCountry'
-import HigherLower from './pages/HigherLower/HigherLower'
 import Header from './components/Header/Header'
+import GuessCountry from './pages/GuessCountry/GuessCountry'
+import CountryInfo from './pages/CountryInfo/CountryInfo'
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<GuessCountry />} />
-        <Route path='/HigherLower' element={<HigherLower />} />
+        <Route path='/country/:name' element={<CountryInfo />} />
       </Routes>
     </div>
   )

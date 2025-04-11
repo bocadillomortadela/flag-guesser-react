@@ -9,9 +9,6 @@ const Header = () => {
           <li>
             <NavLink to='/'>Guess the flag</NavLink>
           </li>
-          <li>
-            <NavLink to='/HigherLower'>Higher or lower?</NavLink>
-          </li>
         </ul>
       </nav>
     </header>

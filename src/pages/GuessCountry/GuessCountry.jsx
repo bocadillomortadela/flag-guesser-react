@@ -2,6 +2,7 @@ import './GuessCountry.css'
 import React, { useEffect, useState } from 'react'
 import { getRandom } from '../../utils/random.js'
 import FlagCard from '../../components/FlagCard/FlagCard.jsx'
+import { Link } from 'react-router-dom'
 
 const GuessCountry = () => {
   const [countries, setCountries] = useState([])
@@ -69,7 +70,10 @@ const GuessCountry = () => {
       <h2>Puntos: {points}</h2>
       <h2>Nivel: {level}</h2>
       <h1>Guess The Flag </h1>
-      <h3>{correctCountry.name.common}</h3>
+      <Link to={`/country/${correctCountry.name.common}`}>
+        <h3>{correctCountry.name.common}</h3>
+      </Link>
+
       <div className='flags'>
         {flags.map((country) => (
           <FlagCard key={country.flags.svg} country={country} handleClick={handleClick} />
