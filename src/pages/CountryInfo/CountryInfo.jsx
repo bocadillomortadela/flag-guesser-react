@@ -20,14 +20,18 @@ const CountryInfo = () => {
   return (
     <div className='country-info'>
       <h2>{country.name.common}</h2>
-      <div className='img_wrp'>
+      <div className='img_wrp single'>
         <img src={country.flags.svg} alt={country.name.common} />
       </div>
       <p>{country.independent ? 'Independent' : 'Dependent'}</p>
-      <p>Europe union member: {country.unMember ? 'True' : 'False'}</p>
-      <p>Currency: {country.currencies.name}</p>
+      <p>
+        Currency:{' '}
+        {Object.values(country.currencies)
+          .map((currency) => `${currency.name} (${currency.symbol})`)
+          .join(', ')}
+      </p>
       <p>Capital: {country.capital}</p>
-      <p>Idiomas: {Object.values(country.languages).join(', ')}</p>
+      <p>Languages: {Object.values(country.languages).join(', ')}</p>
       <p>
         Maps: <a href={country.maps.googleMaps}>{country.maps.googleMaps}</a>
       </p>
